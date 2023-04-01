@@ -1,0 +1,124 @@
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e4eaab;
+}
+
+.navbar {
+	background-color: #ea8787;
+}
+
+.navbar img {
+    width: 100px;
+}
+
+.navbar h6 {
+    color:rgb(224, 249, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.container h4#app-name {
+    margin-top:5%;
+}
+
+h4#header {
+    font-size: 40px;
+    font-family: fantasy;
+    color:rgb(208, 101, 40);
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+#avatar-carousel img{
+    width: 250px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+.arrow img {
+    max-width: 45%;
+}
+
+.prev {
+    left: 0;
+    transform: rotate(180deg);
+}
+  
+.next {
+    right: 0;
+}
+  
+.avatar-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 10px;
+    transition: all 0.2s ease-in-out;
+}
+  
+.avatar-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+  
+
+#name{
+    font-weight: bold;
+    color: rgb(47, 51, 52);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    color:rgb(20, 79, 98)
+}
+
+.btn-play {
+    font-family:Arial b, Helvetica, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 8%;
+	background-color: #d6c5fd;
+	border-radius: 16px;
+	color: #072d6a;
+	font-weight: bolder;
+	transition: 0.2s;
+    text-shadow: 2px 2px 0 rgba(69, 69, 69, 0.178);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    box-shadow: inset 2px 2px 0 rgb(232, 225, 239),
+                inset -2px -2px 0 rgb(122, 70, 170);
+    cursor: pointer;
+}
+
+.btn-play:hover {
+	background-color: #d0fecc;
+	border: 2px solid #272528;
+	color: #d64ca8;
+    text-shadow: rgba(69, 69, 69, 0.064);
+    box-shadow: inset 2px 2px 0 rgb(228, 239, 225),
+    inset -2px -2px 0 rgb(80, 174, 101);
+	transition: 0.2s;
+}
