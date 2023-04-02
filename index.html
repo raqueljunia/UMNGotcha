@@ -21,9 +21,7 @@
   <body>
     <nav class="navbar container-fluid">
       <div class="container justify-content-center">
-        <a
-          href="file:///C:/Raquel/Kuliah%20S1/Sem%202/PTI/Projek%20UTS/index.html"
-        >
+        <a href="index.html">
           <img src="images/Logo1.png" alt="Logo UMNGotcha" />
         </a>
       </div>
@@ -35,8 +33,8 @@
       </div>
     </nav>
 
+    <!-- Tampilan awal -->
     <div id="page-content">
-      <!-- Konten awal -->
       <h4 id="header" style="text-align: center">Choose Your Pet Avatar</h4>
 
       <div id="avatar-carousel" class="carousel slide" data-ride="carousel">
@@ -183,7 +181,7 @@
                 <button class="btn-action" onclick="eat()">Makan</button>
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <button class="btn-action" onclick="drink()">Minum</button>
+                <button class="btn-action" onclick="sleep()">Sleep</button>
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
                 <button class="btn-action" onclick="play()">Main</button>
@@ -205,6 +203,10 @@
     <script>
       let petName = "";
       let selectedAvatar = "";
+      var eatBar = document.getElementById("eat-bar");
+      var sleepBar = document.getElementById("sleep-bar");
+      var gameBar = document.getElementById("game-bar");
+      var healthBar = document.getElementById("health-bar");
 
       function updateStatusBar() {
         setInterval(() => {
