@@ -122,3 +122,48 @@ input[type="text"] {
     inset -2px -2px 0 rgb(80, 174, 101);
 	transition: 0.2s;
 }
+
+/* Tampilan selanjutnya */
+#pet-avatar {
+    margin-top: 50px; 
+}
+  
+#selected-avatar {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+}
+  
+#pet-name {
+    margin-top: 20px;
+}
+  
+#status-bar {
+    margin-top: 50px;
+}
+  
+.status-item {
+    text-align: center;
+}
+  
+.status-item p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.progress {
+    height: 30px;
+    border-radius: 20px;
+    background-color: #eee;
+    position: relative;
+    overflow: hidden;
+}
+  
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
