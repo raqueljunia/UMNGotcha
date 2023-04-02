@@ -49,40 +49,58 @@ h4#header {
     margin-right: 20px;
   }
   
-.avatar-wrapper:last-child {
+  .avatar-wrapper:last-child {
     margin-right: 0;
-}
+  }
   
-.avatar {
+  .avatar {
     width: 100px;
     height: 100px;
     border: 2px solid white;
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
+    transition: border-color 0.2s ease-in-out;
+  }
   
-.avatar.selected {
+  .avatar.selected {
     border-color: #7ec699;
-}
+  }
   
-.input-name {
+  .input-name {
     text-align: center;
-}
+  }
   
-.name-field {
+  .name-field {
     width: 250px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #ac1e67;
+    border: 2px solid #7ec699;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
-}
+  }
+  
+  .btn-play {
+    display: block;
+    margin: 0 auto;
+    background-color: #7ec699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-play:hover {
+    background-color: #64a082;
+  }
+  
 
 #name{
     font-weight: bold;
-    color: rgb(213, 213, 213);
+    color: rgb(47, 51, 52);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
@@ -111,7 +129,6 @@ input[type="text"] {
     box-shadow: inset 2px 2px 0 rgb(232, 225, 239),
                 inset -2px -2px 0 rgb(122, 70, 170);
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
 }
 
 .btn-play:hover {
