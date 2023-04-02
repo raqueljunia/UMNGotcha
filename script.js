@@ -4,6 +4,9 @@ var eatBar = document.getElementById("eat-bar");
 var sleepBar = document.getElementById("sleep-bar");
 var gameBar = document.getElementById("game-bar");
 var healthBar = document.getElementById("health-bar");
+const nameField = document.querySelector(".name-field");
+const greeting = document.getElementById('greeting')
+const time = document.getElementById('time')
 
 function updateStatusBar() {
   setInterval(() => {
@@ -84,19 +87,50 @@ function startGame() {
 }
 
 function playGame() {
-  const nameField = document.querySelector(".name-field");
   petName = nameField.value;
   selectedAvatar = document.querySelector(
     ".carousel-item.active img"
   ).src;
-
+  
   localStorage.setItem("petName", petName);
   const selectedAvatarId = document.querySelector(
     ".carousel-item.active img"
   ).id;
   localStorage.setItem("selectedAvatarId", selectedAvatarId);
 
+  
+  const date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let greetingValue = greeting.value;
+  
+  
+
+  if(hours >= 18) {
+    greetingValue = 'Good Night'
+  }else if(hours >= 6) {
+    greetingValue = 'Good Morning'
+  }else if (hours >= 12) {
+    greetingValue = 'Good Afternoon'
+  }else {
+    greetingValue = 'Good Evening'
+  }
+
+  // if(minutes < 10) {
+  //   minutes = `0${minutes}`
+  // }else {
+  //   return false;
+  // }
+  time.innerHTML = `${hours} : ${minutes}`
+  greeting.innerHTML = `${greetingValue} , ${petName}`
   clearPageContent();
   updateSelectedAvatar();
   startGame();
 }
+
+const start = () => {
+  window.location.href = 'games.html'
+}
+
+
+// Games Section
