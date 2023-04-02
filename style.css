@@ -4,14 +4,20 @@
     }
 }
 
+@font-face {
+    font-family: "GoldenSmile";
+    src: url('Fonts/GoldenSmile.otf'); 
+    src: url('Fonts/GoldenSmile?#iefix') format('embedded-opentype'), 
+         url('Fonts/GoldenSmile.woff') format('woff'), 
+         url('Fonts/GoldenSmile.ttf')  format('truetype'), 
+         url('Fonts/GoldenSmile.svg#svgFontName') format('svg');
+  }
+  
+
 body {
     padding: 0;
     margin: 0;
-    background-color: #e4eaab;
-}
-
-.navbar {
-	background-color: #ea8787;
+    background-image: url("Images/Background4.jpg");
 }
 
 .navbar img {
@@ -31,53 +37,65 @@ body {
 
 h4#header {
     font-size: 40px;
-    font-family: fantasy;
-    color:rgb(208, 101, 40);
+    font-family: "GoldenSmile";
+    color:rgb(0, 93, 85);
     margin-top: 4%;
     margin-bottom: 5%;
+    text-shadow: rgb(255, 255, 255) 2px 1.4px 0px;
 }
 
-#avatar-carousel img{
-    width: 250px;
-}
-
-.avatar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: hidden;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
+.avatar-wrapper {
+    display: inline-block;
+    margin-right: 20px;
   }
-
-.arrow img {
-    max-width: 45%;
-}
-
-.prev {
-    left: 0;
-    transform: rotate(180deg);
-}
   
-.next {
-    right: 0;
-}
+  .avatar-wrapper:last-child {
+    margin-right: 0;
+  }
   
-.avatar-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin: 0 10px;
-    transition: all 0.2s ease-in-out;
-}
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out;
+  }
   
-.avatar-image:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
-}
+  .avatar.selected {
+    border-color: #7ec699;
+  }
+  
+  .input-name {
+    text-align: center;
+  }
+  
+  .name-field {
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #7ec699;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .btn-play {
+    display: block;
+    margin: 0 auto;
+    background-color: #7ec699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-play:hover {
+    background-color: #64a082;
+  }
   
 
 #name{
