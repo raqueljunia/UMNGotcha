@@ -121,7 +121,7 @@
           <p>Enter pet name here..</p>
         </div>
         <div class="input-name mt-4">
-          <input class="name-field" type="text" />
+          <input class="name-field" type="text" required/>
         </div>
         <button type="submit" class="btn-play px-5 py-1" onclick="playGame()">
           PLAY
@@ -140,6 +140,9 @@
         />
         <h4 id="pet-name"></h4>
         <p id="greeting"></p>
+        <p id="time"></p>
+
+        <button class="btn btn-primary" onclick="start()">Start game</button>
         <div id="status-bar" class="mt-lg-5 mt-3">
           <div class="row justify-content-around">
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -215,6 +218,8 @@
       </div>
     </div>
 
+        <!-- TAMPILAN GAME SECTION -->
+        
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

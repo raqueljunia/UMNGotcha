@@ -185,3 +185,16 @@ input[type="text"] {
     height: 100%;
     transition: width 0.5s ease-in-out;
 }
+
+#greeting {
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#time {
+    color: #eee;
+    font-size: 36px;
+    font-weight: 700;
+}
