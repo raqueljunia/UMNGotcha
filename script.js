@@ -91,26 +91,22 @@ function startGame() {
 
 function playGame() {
   petName = nameField.value;
+  selectedAvatar = document.querySelector(".carousel-item.active img").getAttribute('src');
 
-    // Mendapatkan semua gambar avatar dari carousel
-    const avatarImages = document.querySelectorAll("#carouselExampleIndicators .carousel-item img");
 
-    // Menambahkan event listener untuk setiap gambar
-    avatarImages.forEach(function (image) {
-    image.addEventListener("click", function () {
-      // Mendapatkan sumber gambar terpilih
-      const selectedAvatar = this.src;
-  
-      // Menyimpan sumber gambar terpilih ke localStorage
-      localStorage.setItem("selectedAvatar", selectedAvatar);
-    });
-    });
+  localStorage.setItem("petName", petName);
+  const selectedAvatarId = document.querySelector(".carousel-item.active img").getAttribute('id');
+
+  localStorage.setItem("selectedAvatarId", selectedAvatarId);
+
+  document.getElementById("selected-avatar").setAttribute('src', selectedAvatar);
+
 
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let greetingValue = greeting.value;
-  
+
   if (hours >= 4 && hours < 11) {
     gameContent.style.backgroundImage = "url('Images/Morning.jpg')";
     greetingValue = 'Good Morning';
