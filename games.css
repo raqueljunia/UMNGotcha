@@ -69,3 +69,10 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+#score {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    background-image: url(Images/Background8.png);
+}
