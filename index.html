@@ -199,11 +199,6 @@
                     role="progressbar"
                     style="width: 100%"
                   ></div>
-                  <div id="level">
-                    <label>level <span id="levelup">0</span></label>
-                    <br>
-                    <progress id="levelval" value="0" max="1000"></progress>
-                </div>
                 </div>
               </div>
             </div>
@@ -213,8 +208,13 @@
         <h4 id="pet-name"></h4>
         <p id="greeting"></p>
         <p id="time"></p>
-
-        <img id="avatar-image" src="" alt="Avatar" /><br />
+        <img
+          id="selected-avatar"
+          src="Images/KucingDefault.png"
+          alt="Selected Avatar"
+          class="mx-auto"
+        />
+        <br />
 
         <button class="btn btn-primary" onclick="start()">Start game</button>
 
@@ -235,7 +235,7 @@
           </div>
         </div>
         <br />
-        <br /> 
+        <br />
       </div>
     </div>
 
