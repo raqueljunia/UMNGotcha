@@ -146,59 +146,67 @@
 
       <div id="pet-avatar" class="text-center mt-lg-5 mt-3">
         <div id="status-bar" class="mt-lg-5 mt-3">
-          <div class="row justify-content-around">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="status-item">
-                <p>Eat</p>
-                <div class="progress">
-                  <div
-                    id="eat-bar"
-                    class="progress-bar bg-success"
-                    role="progressbar"
-                    style="width: 100%"
-                  ></div>
+          <div class="areaatas">
+            <div class="row justify-content-around">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="status-item">
+                  <img class="icon" id="eat" src="Images/eat.png" />
+                  <div class="progress">
+                    <div
+                      id="eat-bar"
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 100%"
+                    ></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="status-item">
-                <p>Sleep</p>
-                <div class="progress">
-                  <div
-                    id="sleep-bar"
-                    class="progress-bar bg-info"
-                    role="progressbar"
-                    style="width: 100%"
-                  ></div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="status-item">
+                  <img class="icon" id="sleep" src="Images/sleep.png" />
+                  <div class="progress">
+                    <div
+                      id="sleep-bar"
+                      class="progress-bar bg-info"
+                      role="progressbar"
+                      style="width: 100%"
+                    ></div>
+                  </div>
                 </div>
               </div>
-              <br />
             </div>
           </div>
-          <div class="row justify-content-around">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="status-item">
-                <p>Game</p>
-                <div class="progress">
-                  <div
-                    id="game-bar"
-                    class="progress-bar bg-warning"
-                    role="progressbar"
-                    style="width: 100%"
-                  ></div>
+          <div class="areabawah">
+            <div class="row justify-content-around">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="status-item">
+                  <img class="icon" id="game" src="Images/game.png" />
+                  <div class="progress">
+                    <div
+                      id="game-bar"
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 100%"
+                    ></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="status-item">
-                <p>Health</p>
-                <div class="progress">
-                  <div
-                    id="health-bar"
-                    class="progress-bar bg-danger"
-                    role="progressbar"
-                    style="width: 100%"
-                  ></div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="status-item">
+                  <img class="icon" id="obat" src="Images/obat.png" />
+                  <div class="progress">
+                    <div
+                      id="health-bar"
+                      class="progress-bar bg-danger"
+                      role="progressbar"
+                      style="width: 100%"
+                    ></div>
+                    <div id="level">
+                      <label>level <span id="levelup">0</span></label>
+                      <br />
+                      <progress id="levelval" value="0" max="1000"></progress>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

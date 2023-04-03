@@ -11,10 +11,10 @@ const gameContent = document.getElementById("game-content");
 
 function updateStatusBar() {
   setInterval(() => {
-    eatBar -= 0.1;
-    sleepBar -= 0.1;
-    gameBar -= 0.1;
-    healthBar -= 0.1;
+    eatBar -= 1;
+    sleepBar -= 1;
+    gameBar -= 1;
+    healthBar -= 1;
 
     document.getElementById("eat-bar").style.width = `${eatBar}%`;
     document.getElementById("sleep-bar").style.width = `${sleepBar}%`;
@@ -136,4 +136,15 @@ const start = () => {
   window.location.href = 'games.html'
 }
 
+let level = document.getElementById("levelval");
+var leveling = document.getElementById("levelup");
+leveling = 0;
+
+function levelup(){
+    if(level.value == 1000){
+        level.value -=1000;
+        leveling +=1;
+        document.getElementById("levelup").innerHTML = leveling;
+    }
+}
 // Games Section
