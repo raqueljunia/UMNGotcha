@@ -130,3 +130,11 @@ document.addEventListener("keydown", movement)
 function back() {
   window.history.back();
 }
+
+var score = 0;
+
+function addScore() 
+{
+     score += 10;
+document.getElementById("score").innerHTML = "score:" + score;
+}
