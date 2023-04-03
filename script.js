@@ -5,15 +5,16 @@ var sleepBar = document.getElementById("sleep-bar");
 var gameBar = document.getElementById("game-bar");
 var healthBar = document.getElementById("health-bar");
 const nameField = document.querySelector(".name-field");
-const greeting = document.getElementById('greeting')
-const time = document.getElementById('time')
+const greeting = document.getElementById('greeting');
+const time = document.getElementById('time');
+const gameContent = document.getElementById("game-content");
 
 function updateStatusBar() {
   setInterval(() => {
-    eatBar -= 1;
-    sleepBar -= 1;
-    gameBar -= 1;
-    healthBar -= 1;
+    eatBar -= 0.1;
+    sleepBar -= 0.1;
+    gameBar -= 0.1;
+    healthBar -= 0.1;
 
     document.getElementById("eat-bar").style.width = `${eatBar}%`;
     document.getElementById("sleep-bar").style.width = `${sleepBar}%`;
@@ -59,10 +60,12 @@ function medicine() {
 }
 
 function updateSelectedAvatar() {
-  const avatarId = localStorage.getItem("selectedAvatarId");
-  const avatarSrc = document.getElementById(avatarId).getAttribute("src");
-  const selectedAvatar = document.getElementById("selected-avatar");
-  selectedAvatar.setAttribute("src", avatarSrc);
+  // Mendapatkan gambar avatar dari localStorage
+  const selectedAvatar = localStorage.getItem("selectedAvatar");
+
+  // Menampilkan gambar avatar pada halaman
+  const avatarImage = document.querySelector("#avatar-image");
+  avatarImage.src = selectedAvatar;
 }
 
 function clearPageContent() {
@@ -88,41 +91,42 @@ function startGame() {
 
 function playGame() {
   petName = nameField.value;
-  selectedAvatar = document.querySelector(
-    ".carousel-item.active img"
-  ).src;
-  
-  localStorage.setItem("petName", petName);
-  const selectedAvatarId = document.querySelector(
-    ".carousel-item.active img"
-  ).id;
-  localStorage.setItem("selectedAvatarId", selectedAvatarId);
 
+    // Mendapatkan semua gambar avatar dari carousel
+    const avatarImages = document.querySelectorAll("#carouselExampleIndicators .carousel-item img");
+
+    // Menambahkan event listener untuk setiap gambar
+    avatarImages.forEach(function (image) {
+    image.addEventListener("click", function () {
+      // Mendapatkan sumber gambar terpilih
+      const selectedAvatar = this.src;
   
+      // Menyimpan sumber gambar terpilih ke localStorage
+      localStorage.setItem("selectedAvatar", selectedAvatar);
+    });
+    });
+
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let greetingValue = greeting.value;
   
-  
-
-  if(hours >= 18) {
-    greetingValue = 'Good Night'
-  }else if(hours >= 6) {
-    greetingValue = 'Good Morning'
-  }else if (hours >= 12) {
-    greetingValue = 'Good Afternoon'
-  }else {
-    greetingValue = 'Good Evening'
+  if (hours >= 4 && hours < 11) {
+    gameContent.style.backgroundImage = "url('Images/Morning.jpg')";
+    greetingValue = 'Good Morning';
+  } else if (hours >= 11 && hours < 15) {
+    gameContent.style.backgroundImage = "url('Images/Afternoon.jpg')";
+    greetingValue = 'Good Afternoon';
+  } else if (hours >= 15 && hours < 19) {
+    gameContent.style.backgroundImage = "url('Images/Evening.jpg')";
+    greetingValue = 'Good Evening';
+  } else {
+    gameContent.style.backgroundImage = "url('Images/Night.jpg')";
+    greetingValue = 'Good Night';
   }
 
-  // if(minutes < 10) {
-  //   minutes = `0${minutes}`
-  // }else {
-  //   return false;
-  // }
   time.innerHTML = `${hours} : ${minutes}`
-  greeting.innerHTML = `${greetingValue} , ${petName}`
+  greeting.innerHTML = `${greetingValue}, ${petName}`
   clearPageContent();
   updateSelectedAvatar();
   startGame();
@@ -131,6 +135,5 @@ function playGame() {
 const start = () => {
   window.location.href = 'games.html'
 }
-
 
 // Games Section

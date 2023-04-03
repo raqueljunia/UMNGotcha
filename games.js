@@ -46,7 +46,7 @@ const games = {
   },
   resetPlayerPosition() {
     if(config.player.x <= 0 || config.player.x > 15 || config.player.y <= 0 || config.player.y > 15) {
-      console.log('aw kalah....')
+      console.log('Game Over....')
       config.player.x = 7;
       config.player.y = 7;
     }
@@ -120,5 +120,5 @@ setInterval(start, config.speed)
 document.addEventListener("keydown", movement)
 
 function back() {
-    window.location.href = 'index.html'
+  window.history.back();
 }
