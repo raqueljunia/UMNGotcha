@@ -113,6 +113,7 @@ input[type="text"] {
     text-shadow: 1px 1px #272528;
     background-image: url("Images/Morning.jpg");
     background-size: cover;
+    width: auto;
 }
 
 #pet-avatar {
@@ -121,7 +122,6 @@ input[type="text"] {
   
 #selected-avatar {
    width: 150px;
-   height: 150px;
 }
   
 #pet-name {
@@ -129,6 +129,8 @@ input[type="text"] {
 }
   
 #status-bar {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
     display:block;
     flex-direction: column;

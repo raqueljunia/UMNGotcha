@@ -69,28 +69,36 @@ const games = {
   }, 
 }
 
-function movement(listen) {
-   switch(listen.key) {
-    case "ArrowUp": //ArrowUp
-      config.velocity.y = -1;
-      config.velocity.x = 0;
-    break;
-    case "ArrowDown": //ArrowDown
-      config.velocity.y = 1;
-      config.velocity.x = 0;
-    break;
-    case "ArrowLeft": //ArrowLeft
-      config.velocity.x = -1;
-      config.velocity.y = 0;
-    break;
-    case "ArrowRight": //ArrowRight
-      config.velocity.x = 1;
-      config.velocity.y = 0;
-    break;
-    default:
-      break;
-   }
+function startGame() {
+  UMNGotchaPiece = new component(30, 30, "red", 10, 120);
+  UMNGotchaPiece.gravity = 0.05;
+  Score = new component("30px", "Consolas", "black", 280, 40, "text");
+  UMNGotchaArea.start();
 }
+
+function movement(listen) {
+  switch(listen.key) {
+   case "ArrowUp": //ArrowUp
+     config.velocity.y = -1;
+     config.velocity.x = 0;
+   break;
+   case "ArrowDown": //ArrowDown
+     config.velocity.y = 1;
+     config.velocity.x = 0;
+   break;
+   case "ArrowLeft": //ArrowLeft
+     config.velocity.x = -1;
+     config.velocity.y = 0;
+   break;
+   case "ArrowRight": //ArrowRight
+     config.velocity.x = 1;
+     config.velocity.y = 0;
+   break;
+   default:
+     break;
+  }
+}
+
 
 function headMovement() {
   const playerEl = document.getElementById("player")
@@ -121,4 +129,12 @@ document.addEventListener("keydown", movement)
 
 function back() {
   window.history.back();
+}
+
+var score = 0;
+
+function addScore() 
+{
+     score += 10;
+document.getElementById("score").innerHTML = "score:" + score;
 }
