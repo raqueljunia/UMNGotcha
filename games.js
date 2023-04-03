@@ -69,28 +69,27 @@ const games = {
   }, 
 }
 
-function movement(listen) {
-   switch(listen.key) {
-    case "ArrowUp": //ArrowUp
-      config.velocity.y = -1;
-      config.velocity.x = 0;
-    break;
-    case "ArrowDown": //ArrowDown
-      config.velocity.y = 1;
-      config.velocity.x = 0;
-    break;
-    case "ArrowLeft": //ArrowLeft
-      config.velocity.x = -1;
-      config.velocity.y = 0;
-    break;
-    case "ArrowRight": //ArrowRight
-      config.velocity.x = 1;
-      config.velocity.y = 0;
-    break;
-    default:
-      break;
-   }
+function startGame() {
+  UMNGotchaPiece = new component(30, 30, "red", 10, 120);
+  UMNGotchaPiece.gravity = 0.05;
+  Score = new component("30px", "Consolas", "black", 280, 40, "text");
+  UMNGotchaArea.start();
 }
+
+var UMNGotchaArea = {
+  canvas : document.createElement("canvas"),
+  start : function() {
+    this.canvas.width = 480;
+    this.canvas.height = 270;
+    this.context = this.canvas.getContext("2d");
+    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    this.frameNo = 0;
+  },
+  clear : function() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
+}
+
 
 function headMovement() {
   const playerEl = document.getElementById("player")
