@@ -1,12 +1,23 @@
 # UMNGotcha
 Proyek UTS PTI Lecture
 
-Kelompok 1:
-1. Raquel Junia Hermawan
-2. Faizul Anwar
-3. Yohanes Andre Yanto
-4. Rifqah Aulia Salsabilla
+Kelompok 1 :
+1. Raquel Junia Hermawan    [00000079018]
+2. Faizul Anwar             [00000078570]
+3. Yohanes Andre Yanto      [00000061457]
+4. Rifqah Aulia Salsabilla  [00000077820]
 
-link github:
+Game UMN Gotcha adalah sebuah aplikasi permainan simulasi hewan peliharaan berbasis web yang dibuat menggunakan bahasa pemrograman HTML, CSS, dan JavaScript. Pertama-tama pemain dapat memilih salah satu hewan dari 4 pilihan hewan yang ada, yaitu kucing, monyet, serigala, dan beruang. Kemudian, pemain dapat memasukkan nama hewan sesuai yang diinginkannya. Dalam game ini, pemain harus merawat hewan yang telah ia pilih dengan cara menekkan tombol-tombol yang tersedia. Tombol-tombol tersebut ditunjukkan untuk memberi makan, mengajak bermain, membiarkan tidur, dan juga untuk mengurus kesehatan dari hewannya itu.
 
-Game UMN Gotcha adalah sebuah aplikasi permainan simulasi kehidupan hewan peliharaan berbasis web yang dibuat menggunakan HTML,CSS dan JavaSrcript. kami memasukan hewan peliharaan berjenis kucing, monyet, serigala dan beruang. user bisa bebas memilih avatar hewan dan memilih nama hewan sesuai yang di inginkan. background game ini juga sudah sesuai waktu di dunia nyata. seperti jika jam menunjukan waktu pagi maka background nya akan berubah  dan jika jam menunjukan waktu sore atau malam maka background di dalam game akan berubah sesuai dengan waktu di dunia nyata. kita juga menaruh fitur "bermain". permainan ini seperti ketika user memilih start maka akan muncul hewan peliharaanya dan makanan berbentuk  ikan. user akan mengarahkan hewan peliharaan tersebut ke makanan.
+Fitur game yang tersedia :
+- Pemilihan avatar (total 4 avatar)
+- Jam
+- Greetings (memberi salam sesuai waktu: pagi/siang/sore/malam)
+- Perubahan background (sesuai waktu: pagi/siang/sore/malam)
+- 5 level permainan
+- Menampilkan persentase kondisi 'makan', 'tidur', 'main', dan 'kesehatan' dari hewan
+- Menampilkan persentase 'money' yang terkumpul oleh pemain dari lamanya ia bertahan dalam permainan
+- Tombol level up untuk menaikkan level dari hewan
+- Menampilkan status bar kondisi hewan (yang berkurang secara terus menerus)
+- Tombol agar pemain dapat menaikkan masing-masing bar status kondisi hewan
+- Permainan dimana pemain akan mengarahkan hewannya menuju makanan dengan menggunakan keyboard
