@@ -127,62 +127,6 @@ input[type="text"] {
 #pet-name {
     margin-top: 20px;
 }
-  
-#status-bar {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    display:block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-    border: 3px solid black;
-    height: 170px;
-    width: 1000px;
-}
-
-.areaatas{
-    height: 70px;
-    margin-top: 1px;
-    justify-content: space-around;
-}
-.areabawah{
-    height: 40px;
-    justify-content: space-around
-}
-  
-.status-item {
-    text-align: center;
-}
-  
-.status-item p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-  
-.kotakatas{
-    margin-top: 20px;
-    height: 136px;
-    border-bottom: 4px solid black;
-    margin-bottom: 2px;
-    text-align: center;
-    font-family:  "Lucida Console", "Courier New", monospace; 
-    font-weight: 900;
-    font-size: 18px;
-}
-.kotakbawah{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon{
-    margin-right: 5px;
-    width: 40px;
-}
 
 .progress {
     height: 30px;
@@ -213,3 +157,15 @@ input[type="text"] {
     font-weight: 700;
 }
 
+img.btn {
+    width: 80px;
+    height: auto;
+}
+
+.container {
+    text-align: center;
+}
+
+.col-xs-5 {
+    text-shadow: 1px 1px#eee;
+}

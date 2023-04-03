@@ -143,22 +143,18 @@ $(document).ready(function() {
 
   $('#food').click(function() {
     tamagotchi.food += 5;
-    food();
   });
 
   $('#game').click(function() {
     tamagotchi.game += 5;
-    play();
   });
 
   $('#sleep').click(function() {
     tamagotchi.sleep += 5;
-    sleep();
   });
 
   $('#health').click(function() {
     tamagotchi.health += 5;
-    medicine();
   });
 
   $('#buy-level-up').on('click', 'img', function () {

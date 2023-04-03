@@ -53,6 +53,10 @@ body {
     font-weight: bold;
 }
 
+.stats {
+    text-align: justify;
+}
+
 .eat-status {
     opacity: 1;
     position: absolute;
@@ -76,3 +80,16 @@ body {
     padding: 10px;
     background-image: url(Images/Background8.png);
 }
+
+.stats {
+    padding-left: 35px;
+  }
+
+.btn {
+  width: 60px;
+}
+
+.hide {
+    display: none;
+}
+  
