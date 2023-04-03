@@ -144,101 +144,119 @@
         </div>
       </nav>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p id="greeting"></p>
+            <p id="time"></p>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-xs-7 text-center">
+            <img
+              id="selected-avatar"
+              src="Images/KucingDefault.png"
+              alt="Selected Avatar"
+              class="mx-auto"
+            />
+            <br /><br />
+          </div>
+          <div class="col-xs-5 stats">
+            <p>
+              <img src="Images/eat.png" width="20px" height="20px" />
+              <span class="food">100</span>%
+            </p>
+            <p>
+              <img src="Images/game.png" width="20px" height="20px" />
+              <span class="game">100</span>%
+            </p>
+            <p>
+              <img src="Images/sleep.png" width="20px" height="20px" />
+              <span class="sleep">100</span>%
+            </p>
+            <p>
+              <img src="images/obat.png" width="20px" height="20px" />
+              <span class="health">100</span>%
+            </p>
+            <p>
+              <img src="images/money.png" width="20px" height="20px" /> $<span
+                class="money"
+                >0.00</span
+              >
+            </p>
+            <p>Lvl: <span class="level">1</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="progress progress-striped">
+              <div id="food-level" class="progress-bar progress-bar-success">
+                Hunger Level
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <button id="food" class="btn btn-success" onclick="eat()">
+              Food
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="progress progress-striped">
+              <div id="game-level" class="progress-bar progress-bar-success">
+                Happiness Level
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <button id="game" class="btn btn-success" onclick="play()">
+              Game
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="progress progress-striped">
+              <div id="sleep-level" class="progress-bar progress-bar-success">
+                Sleep Level
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <button id="sleep" class="btn btn-success" onclick="sleep()">
+              Sleep
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="progress progress-striped">
+              <div id="health-level" class="progress-bar progress-bar-success">
+                Health Level
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <button id="health" class="btn btn-success" onclick="medicine()">
+              Health
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="level-up" class="col-xs-4 gray-item">
+            <img src="Images/waitLevelUp.png" width="72" height="72" />
+          </div>
+          <div id="buy-level-up" class="col-xs-4 hide">
+            <img src="Images/levelUp.png" width="72" height="72" />
+          </div>
+        </div>
+      </div>
+
       <div id="pet-avatar" class="text-center mt-lg-5 mt-3">
-        <div id="status-bar" class="mt-lg-5 mt-3">
-          <div class="areaatas">
-            <div class="row justify-content-around">
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="status-item">
-                  <img class="icon" id="eat" src="Images/eat.png" />
-                  <div class="progress">
-                    <div
-                      id="eat-bar"
-                      class="progress-bar bg-success"
-                      role="progressbar"
-                      style="width: 100%"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="status-item">
-                  <img class="icon" id="sleep" src="Images/sleep.png" />
-                  <div class="progress">
-                    <div
-                      id="sleep-bar"
-                      class="progress-bar bg-info"
-                      role="progressbar"
-                      style="width: 100%"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="areabawah">
-            <div class="row justify-content-around">
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="status-item">
-                  <img class="icon" id="game" src="Images/game.png" />
-                  <div class="progress">
-                    <div
-                      id="game-bar"
-                      class="progress-bar bg-warning"
-                      role="progressbar"
-                      style="width: 100%"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="status-item">
-                  <img class="icon" id="obat" src="Images/obat.png" />
-                  <div class="progress">
-                    <div
-                      id="health-bar"
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      style="width: 100%"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h4 id="pet-name"></h4>
-        <p id="greeting"></p>
-        <p id="time"></p>
-        <img
-          id="selected-avatar"
-          src="Images/KucingDefault.png"
-          alt="Selected Avatar"
-          class="mx-auto"
-        />
-        <br />
-
         <button class="btn btn-primary" onclick="start()">Start game</button>
-
-        <div id="action-buttons" class="text-center mt-lg-5 mt-3">
-          <div class="row justify-content-around">
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-              <button class="btn-action" onclick="eat()">Makan</button>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-              <button class="btn-action" onclick="sleep()">Sleep</button>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-              <button class="btn-action" onclick="play()">Main</button>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-              <button class="btn-action" onclick="medicine()">Obat</button>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
       </div>
     </div>
 
