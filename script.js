@@ -136,4 +136,15 @@ const start = () => {
   window.location.href = 'games.html'
 }
 
+let level = document.getElementById("levelval");
+var leveling = document.getElementById("levelup");
+leveling = 0;
+
+function levelup(){
+    if(level.value == 1000){
+        level.value -=1000;
+        leveling +=1;
+        document.getElementById("levelup").innerHTML = leveling;
+    }
+}
 // Games Section
